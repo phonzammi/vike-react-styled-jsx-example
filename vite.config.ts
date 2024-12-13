@@ -3,5 +3,12 @@ import { defineConfig } from "vite";
 import vike from "vike/plugin";
 
 export default defineConfig({
-  plugins: [vike({}), react({})],
+  plugins: [
+    vike({}),
+    react({
+      babel: {
+        plugins: [["styled-jsx/babel", { sourceMaps: false }]],
+      },
+    }),
+  ],
 });
