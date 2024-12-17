@@ -5,7 +5,7 @@ export { onAfterRenderHtml };
 
 function onAfterRenderHtml(pageContext: PageContext) {
   const config = useConfig();
-  const registry = pageContext.config.registry;
+  const registry = pageContext.registry;
 
   if (registry) {
     const styles = registry.styles();
